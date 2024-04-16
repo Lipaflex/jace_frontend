@@ -1,10 +1,10 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import {productService} from "./productService";
 import {toast } from "react-toastify";
-import { authService } from "../user/userService";
 
 export const getAllProducts=createAsyncThunk(
-    "products/getAll",async (thunkAPI)=>{
+    "product/get",
+    async (thunkAPI)=>{
         try{
             return await productService.getProducts();
         } catch(error){
@@ -14,7 +14,7 @@ export const getAllProducts=createAsyncThunk(
 });
 
 const productState = {
-    products:[],
+    product:"",
     isError:false,
     isSuccess:false,
     isLoading:false,
@@ -22,11 +22,9 @@ const productState = {
 }
 
 export const  productSlice = createSlice({
-    name:"products",
+    name:"product",
     initialState:productState,
-    reducers:{
-        
-    },
+    reducers:{},
     extraReducers:builder=>{
         builder.addCase(getAllProducts.pending,(state)=>{
             state.isLoading=true;

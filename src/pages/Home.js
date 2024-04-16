@@ -5,7 +5,7 @@ import BlogCard from '../components/BlogCard';
 import ProductCard from '../components/ProductCard';
 //import SpecialProduct from '../components/SpecialProduct';
 import Container from '../components/Container';
-import { services } from '../Utils/Data';
+import { services } from '../utils/Data';
 
 const Home = () => {
   const [Featuredproducts] = useState( [

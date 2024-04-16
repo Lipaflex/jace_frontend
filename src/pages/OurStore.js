@@ -214,7 +214,7 @@ const OurStore = () => {
                             `}
                      </style>
                         <div className='d-flex flex-wrap' style={{ flexWrap: 'wrap' }}>
-                            <ProductCard className='product-card' />
+                            <ProductCard data={productState} className='product-card' />
                         </div>
                     </div>
                 </div>

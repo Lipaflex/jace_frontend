@@ -7,7 +7,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { registerUser } from '../features/user/userSlice';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 const signUpSchema = yup.object({
     firstname: yup.string().required('First Name is Required'),
@@ -104,9 +104,6 @@ const Signup = () => {
                         <div>
                             <div className='mt-3 d-flex justify-content-center gap-15 align-items-center' >
                                 <button className='button border-0' type='submit' >Sign Up</button>
-                                <Link to='/login' className='button login text-white' >
-                                    Login
-                                    </Link>
                             </div>
                         </div>
                     </form>
