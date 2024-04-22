@@ -21,7 +21,7 @@ const Checkout = () => {
                             aria-current="page">Information
                             </li>&nbsp;/
                             <li className="breadcrumb-item total-price">
-                                <a href="#" className='text-dark active' >Shipping</a>
+                                <a href="/#" className='text-dark active' >Shipping</a>
                                 </li> &nbsp;/
                             <li className="breadcrumb-item total-price active" 
                             aria-current="page">Payment

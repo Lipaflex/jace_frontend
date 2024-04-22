@@ -8,7 +8,7 @@ import Container from '../components/Container';
 import { services } from '../utils/Data';
 
 const Home = () => {
-  const [Featuredproducts] = useState( [
+  const [] = useState( [
     {
         id:11,
         name:'Watch',

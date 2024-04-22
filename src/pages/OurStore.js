@@ -16,7 +16,7 @@ const OurStore = () => {
     }, [dispatch]);
 
     useEffect(() => {
-        getProducts();
+        "getProducts()";
     }, []);
 
     return (

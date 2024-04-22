@@ -18,7 +18,7 @@ const SingleProduct = () => {
         scale:1.5,
         zoomWidth:500, 
        };
-    const [orderedproduct , setorderedproduct] = useState(true);
+    const [orderedproduct ] = useState(true);
   return (
     <>
     <Meta title={'Product Name'} />
@@ -137,11 +137,11 @@ const SingleProduct = () => {
                             </div>
                             <div className='d-flex align-items-center gap-15' >
                                 <div>
-                                    <a href='' ><IoGitCompareOutline className='fs-5' />
+                                    <a href="/#" ><IoGitCompareOutline className='fs-5' />
                                     Add to Compare</a>
                                 </div>
                                 <div>
-                                    <a href='' ><CiHeart className='fs-5' />
+                                    <a href="/#" ><CiHeart className='fs-5' />
                                     Add to Wishlist</a>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@ const SingleProduct = () => {
                             orderedproduct&&
                             <div>
                            <a className='text-dark text-decoration-underline' 
-                           href='' >Write a Review</a> 
+                           href="/#" >Write a Review</a> 
                         </div>
                         }
                     </div>
