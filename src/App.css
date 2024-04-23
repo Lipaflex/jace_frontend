@@ -388,8 +388,8 @@ margin-right: 20px;
   font-weight: 100px;
   color: white;
 }
-
 /* Famous card ends here*/
+
 
 /* Our Store starts here*/
 .filter-card{
@@ -456,13 +456,19 @@ border-color: var(--color-febd69);
   max-height: 150px;
   object-fit: contain;
 }
+.product-title {
+  width: 160px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
 .product-grid {
   display: grid;
   gap:16px;
   padding:16px;
 }
 .product-card {
-  width: 95%;
+  width: 93%;
 }
 /* Our Store ends here*/
 
