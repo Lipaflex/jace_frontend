@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllProducts } from '../features/products/productSlice';
 
 const OurStore = () => {
-    const [setGrid] = useState(4);
     const productState = useSelector((state) => state.products.product);
     
     const dispatch = useDispatch();
@@ -180,9 +179,7 @@ const OurStore = () => {
                         <div className='d-flex align-items-center gap-15'>
                             <p className='totalproducts mb-0'>21 Products</p>
                             <div className='d-flex gap-10 align-items-center grid'>
-                                <img onClick={() => {setGrid(3);
-                                }}
-                                src='images/gr4.svg' className='d-block img-fluid' alt='grid' />
+                                
                             </div>
                         </div>
                         </div>
