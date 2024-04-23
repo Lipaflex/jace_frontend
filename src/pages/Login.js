@@ -43,7 +43,8 @@ const Login = () => {
                          value={formik.values.email} />
                          <div>
                             {formik.touched.email && formik.errors.email ? 
-                            <div className='error'>{formik.errors.email}</div> : null}
+                            <div className='error'>
+                              {formik.errors.email}</div> : null}
                          </div>
                         <CustomInput type='password' name='password' placeholder='Password'
                         onChange={formik.handleChange('password')}

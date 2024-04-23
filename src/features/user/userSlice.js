@@ -27,13 +27,13 @@ export const loginUser = createAsyncThunk(
 );
 
 const initialState={
-    user:"",
+    user: null,
+    token: null,
     isError:false,
     isSuccess:false,
     isLoading:false,
     message:""
 };
-
 
 export const authSlice=createSlice({
     name:"auth",
@@ -45,44 +45,35 @@ export const authSlice=createSlice({
                 state.isLoading = true;
             })
             .addCase(registerUser.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.isError = false;
-                state.isSuccess = true;
-                state.createdUser = action.payload;
-                if(state.isSuccess === true){
-                    toast.info("User created successfully");
-                }
+              state.isLoading = false;
+              state.isSuccess = true;
+              state.user = action.payload;
+              toast.success("Registration successful");
             })
             .addCase(registerUser.rejected, (state, action) => {
-                state.isLoading = false;
-                state.isError = true;
-                state.isSuccess = false;
-                state.message = action.error;
-                if(state.isError === true){
-                  toast.error(action.error);
-              }
+              state.isLoading = false;
+              state.isError = true;
+              state.message = action.payload;
+              toast.error(action.payload);
           })
-          .addCase(loginUser.pending, (state) => {
+          .addCase(loginUser.pending, state => {
             state.isLoading = true;
         })
         .addCase(loginUser.fulfilled, (state, action) => {
-            state.isLoading = false;
-            state.isError = false;
-            state.isSuccess = true;
+          if(action.payload) {
             state.user = action.payload;
-            if(state.isSuccess === true){
-              localStorage.setItem('token', action.payload.token);
-                toast.info("User logged in successfully");
-            }
+            state.token = action.payload.token;
+            localStorage.setItem("token", action.payload.token);
+          }
+          state.isLoading = false;
+          state.isSuccess = true;
+          toast.success("Login successful");
         })
         .addCase(loginUser.rejected, (state, action) => {
-            state.isLoading = false;
-            state.isError = true;
-            state.isSuccess = false;
-            state.message = action.error;
-            if(state.isError === true){
-              toast.error(action.error);
-          }
+          state.isLoading = false;
+          state.isError = true;
+          state.message = action.payload;
+          toast.error(action.payload);
       });
     },
 });

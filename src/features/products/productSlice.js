@@ -3,7 +3,7 @@ import {productService} from "./productService";
 import {toast } from "react-toastify";
 
 export const getAllProducts=createAsyncThunk(
-    "products/get",
+    "product/get",
     async (thunkAPI)=>{
         try{
             return await productService.getProducts();
@@ -25,14 +25,14 @@ export const  productSlice = createSlice({
     name:"product",
     initialState:productState,
     reducers:{},
-    extraReducers:builder=>{
+    extraReducers:(builder)=>{
         builder.addCase(getAllProducts.pending,(state)=>{
             state.isLoading=true;
         }).addCase(getAllProducts.fulfilled,(state,action)=>{
             state.isLoading=false;
             state.isSuccess=true;
             state.isError=false;
-            state.products=action.payload;
+            state.product=action.payload;
         }).addCase(getAllProducts.rejected,(state,action)=>{
             state.isLoading=false;
             state.isError=true;
