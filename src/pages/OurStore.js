@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllProducts } from '../features/products/productSlice';
 
 const OurStore = () => {
-    const productState = useSelector((state) => state.products.product);
+    const productState = useSelector((state) => state.products?.product);
     
     const dispatch = useDispatch();
     useEffect(() => {
@@ -210,7 +210,7 @@ const OurStore = () => {
                             `}
                      </style>
                         <div className='d-flex flex-wrap' style={{ flexWrap: 'wrap' }}>
-                            <ProductCard data={productState} className='product-card' />
+                            <ProductCard data={productState? productState : []} className='product-card' />
                         </div>
                     </div>
                 </div>

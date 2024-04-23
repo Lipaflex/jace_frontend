@@ -9,35 +9,6 @@ import { services } from '../utils/Data';
 
 const Home = () => {
   const [] = useState( [
-    {
-        id:11,
-        name:'Watch',
-        description:'Introducing the SmartGear Apex Smart Watch – a fusion of style and intelligence. Elevate your daily routine with this sleek, high-tech timepiece. Monitor your fitness goals.l',
-        price: 20000,
-        image:'images/watch-2.jpg',
-    },
-    {
-      id:12,
-      name:'Watch',
-      description:'Introducing the SmartGear Apex Smart Watch – a fusion of style and intelligence. Elevate your daily routine with this sleek, high-tech timepiece. Monitor your fitness goals.l',
-      price: 20000,
-      image:'images/watch-2.jpg',
-  },
-  {
-    id:13,
-    name:'Watch',
-    description:'Introducing the SmartGear Apex Smart Watch – a fusion of style and intelligence. Elevate your daily routine with this sleek, high-tech timepiece. Monitor your fitness goals.l',
-    price: 20000,
-    image:'images/watch-2.jpg',
-},
-{
-  id:14,
-  name:'TV',
-  description:'Introducing the SmartGear Apex Smart Watch – a fusion of style and intelligence. Elevate your daily routine with this sleek, high-tech timepiece. Monitor your fitness goals.l',
-  price: 20000,
-  image:'images/watch-2.jpg',
-},
-
 ]);
   return (
     <>
